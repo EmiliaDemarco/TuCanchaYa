@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lugares en Rosario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{categoria.nombre}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let item of categoria.productos" [routerLink]="['/productos',  item.id]" >
+    <img alt="{{item.nombre}}" src="{{item.imagen}}" />
+    <ion-card-header>
+      <ion-card-title>{{item.nombre}}</ion-card-title>
+      <ion-card-subtitle>${{item.precio}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{item.direccion}}
+    </ion-card-content>
+  </ion-card>
+
+
+  

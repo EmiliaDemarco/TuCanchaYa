@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{producto.nombre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{producto.nombre}}</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+  <img src="{{producto.imagen}}" alt="">
+  <p>{{producto.direccion}}</p>
+  <p>${{producto.precio}}</p>
+  <ion-button fill="outline" shape="round"  expand="block" (click)="onAgregarAlCarritoClicked()" >Seleccionar horarios</ion-button>
+</ion-content>

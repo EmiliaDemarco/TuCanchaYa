@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <section id="categorias-container">
+    <a 
+    *ngFor="let item of categorias"
+    [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}"
+    [routerLink]="['/categorias',item.id]" 
+    >{{item.nombre}}</a> 
+
+  </section>
+</ion-content>

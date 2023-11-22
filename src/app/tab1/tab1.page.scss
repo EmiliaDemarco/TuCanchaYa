@@ -1,0 +1,16 @@
+#categorias-container{
+    margin-top: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; //columnas
+    a{
+        padding: 60px 20px;
+        border-radius: 10px;
+        color: black;
+        margin: 10px 10px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        font-weight: bolder;
+        
+    }
+}

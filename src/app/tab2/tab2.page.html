@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tu perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Crea tu usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="secondary">
+        <ion-card-content> 
+      <ion-list>
+        <ion-item>
+          
+          <ion-textarea label="Nombre de usuario" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-textarea label="Email" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-textarea label="Telefono" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-textarea label="Contraseña" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-textarea label="Sugerencias" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <button (click)="cambiarColor()" [ngClass]="{'rojo': colorDelBoton === 'rojo', 'rosa': colorDelBoton === 'rosa'}"(click)="realizarRegistro()">Enviar</button>
+      <div *ngIf="registroExitoso">
+        <p>Registro exitoso. ¡Bienvenido!</p>
+      </div>   
+    </ion-card-content>
+  </ion-card>
+
+   
